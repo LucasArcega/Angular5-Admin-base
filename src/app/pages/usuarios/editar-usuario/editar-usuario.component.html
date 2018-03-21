@@ -1,0 +1,48 @@
+<nb-card>
+    <nb-card-header>
+        {{usuario.Id> 0 ?"Editar":"Novo"}} Usuario {{usuario.Nome!=""?"| "+usuario.Nome:""}}
+    </nb-card-header>
+    <nb-card-body>
+        <nb-card-body>
+            <div class="form-group">
+                <label for="">Nome completo</label>
+                <input [(ngModel)]="usuario.Nome" type="text" placeholder="Nome" class="form-control" />
+            </div>
+
+            <div class="row form-group">
+                <div class="col-sm-6">
+                    <label for="">Email</label>
+                    <input [(ngModel)]="usuario.Email" type="Email" placeholder="E-mail" class="form-control" />
+                </div>
+
+                <div class="col-sm-6">
+                    <label for="">Telefone</label>
+                    <input [(ngModel)]="usuario.Telefone" type="text" placeholder="Telefone" class="form-control" />
+                </div>
+            </div>
+
+            <div class="row form-group">
+
+                <div class="col-sm-6">
+                    <label>Tipo de usuário</label>
+                    <select [(ngModel)]="usuario.TipoUsuario" class="form-control">
+                        <option *ngFor="let tipo of tipoUsuario" [value]="tipo">{{tipo}}</option>
+                    </select>
+                </div>
+
+                <div style="padding-top:50px;" class="col-sm-6">
+                    <nb-checkbox class="inline" status="success" [(ngModel)]="usuario.Ativo">Usuário ativo</nb-checkbox>
+                </div>
+
+            </div>
+            <div class="row form-group">
+
+
+                <div class="offset-sm-9 col-sm-3">
+                    <button type="submit" class="btn btn-success">Salvar</button>
+                </div>
+            </div>
+
+        </nb-card-body>
+    </nb-card-body>
+</nb-card>
