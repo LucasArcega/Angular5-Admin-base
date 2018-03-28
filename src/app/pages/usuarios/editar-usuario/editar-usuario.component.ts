@@ -14,15 +14,6 @@ export class EditarUsuarioComponent implements OnInit {
 	constructor() {
         this.tipoUsuario = ["cliente","administrador"];
         this.usuario = new Usuario();
-		// this.usuario = {
-		// 	Id: 2,
-		// 	Nome: "Ruan Santos",
-		// 	Telefone: "(51) 98123-1233",
-		// 	Email: "RuanSantos@gmail.com",
-		// 	Ativo: true,
-		// 	TipoUsuario: "cliente"
-		// } as Usuario;
-
 	}
 
 	ngOnInit() {

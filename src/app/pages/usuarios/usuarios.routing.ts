@@ -11,7 +11,6 @@ const routes: Routes = [
   {
     path: 'detalhe/:id?',
     component: EditarUsuarioComponent
-
   }
 ];
 
