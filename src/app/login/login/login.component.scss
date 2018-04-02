@@ -2,13 +2,13 @@
 @import '~bootstrap/scss/mixins/breakpoints';
 @import '~@nebular/theme/styles/global/bootstrap/breakpoints';
 
-
 @include nb-install-component() {
 
+	
   nb-card-body {
     overflow: visible;
   }
-  nb-checkbox.inline{
+  nb-checkbox.inline {
       margin-bottom: -30px;
   }
   .input-group {
