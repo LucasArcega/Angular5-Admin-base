@@ -1,0 +1,71 @@
+<nb-card>
+	<nb-card-header>
+		{{estabelecimento.IdEstabelecimento> 0 ?"Editar":"Novo"}} estabelecimento {{estabelecimento.Nome!="" ? "| "+estabelecimento.Nome:""}}
+	</nb-card-header>
+	<nb-card-body>
+
+	<!-- IdEstabelecimento:number;
+
+    InscricaoEstadual:string;
+
+    InscricaoMunicipal:string;-->
+		<nb-card-body>
+			<div class="form-group">
+				<label for="">Nome</label>
+				<input [(ngModel)]="estabelecimento.Nome" type="text" placeholder="Nome" class="form-control" />
+			</div>
+
+			<div class="form-group">
+				<label for="">Razão social</label>
+				<input [(ngModel)]="estabelecimento.RazaoSocial" type="text" placeholder="Razao Social" class="form-control" />
+			</div>
+
+			<div class="form-group">
+				<label for="">Nome Fantasia</label>
+				<input [(ngModel)]="estabelecimento.RazaoSocial" type="text" placeholder="Nome Fantasia" class="form-control" />
+			</div>
+			<div class="row form-group">
+				<div class="col-sm-6">
+					<label for="">Nome do contato</label>
+					<input [(ngModel)]="estabelecimento.NomeContato" type="text" placeholder="Nome do contato" class="form-control" />
+				</div>
+
+				<div class="col-sm-6">
+					<label for="">Telefone do contato</label>
+					<input [(ngModel)]="estabelecimento.Telefone" type="text" placeholder="Telefone" class="form-control" />
+				</div>
+			</div>
+
+			<div class="row form-group">
+					<div class="col-sm-6">
+						<label for="">Inscrição Estadual</label>
+						<input [(ngModel)]="estabelecimento.InscricaoEstadual" type="text" placeholder="Inscrição estadual" class="form-control" />
+					</div>
+	
+					<div class="col-sm-6">
+						<label for="">Inscrição Municipal</label>
+						<input [(ngModel)]="estabelecimento.InscricaoMunicipal" type="text" placeholder="Inscrição municipal" class="form-control" />
+					</div>
+				</div>
+
+			<div class="row form-group">
+
+				<div class="col-sm-6">
+					<label for="">CNPJ</label>
+					<input [(ngModel)]="estabelecimento.Cnpj" type="text" placeholder="CNPJ" class="form-control" />
+				</div>
+
+				<div style="padding-top:50px;" class="col-sm-6">
+					<nb-checkbox class="inline" status="success" [(ngModel)]="estabelecimento.Ativo">Estabelecimento ativo</nb-checkbox>
+				</div>
+
+			</div>
+			<div class="row form-group">
+				<div class="offset-sm-9 col-sm-3">
+					<button type="submit" class="btn btn-success">Salvar</button>
+				</div>
+			</div>
+
+		</nb-card-body>
+	</nb-card-body>
+</nb-card>

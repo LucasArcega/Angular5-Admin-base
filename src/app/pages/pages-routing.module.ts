@@ -16,6 +16,10 @@ const routes: Routes = [
             {
                 path: 'usuarios',
                 loadChildren: './usuarios/usuarios.module#UsuariosModule'
+            },
+            {
+                path: 'estabelecimentos',
+                loadChildren: './estabelecimentos/estabelecimentos.module#EstabelecimentosModule'
             }, {
                 path: 'ui-features',
                 loadChildren: './ui-features/ui-features.module#UiFeaturesModule',
